@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GameView from './game/game-view.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <section className="portfolio">
+        <header className="portfolio-header">
+          <div className="portfolio-header__cuboid">
+
+          </div>
+          <h1 className="portfolio-header__title">
+            Hi, <span className="portfolio-header__name">I&#39;m Brad.</span>
+          </h1>
+          <h2 className="portfolio-header__tagline">
+            I make games, apps, and all sorts of cool stuff.
+          </h2>
+          <GameView />
+          
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="centerMarker"></div>
+      </section>
     );
   }
 }

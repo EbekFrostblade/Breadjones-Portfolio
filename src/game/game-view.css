@@ -1,0 +1,43 @@
+.game-view {
+  animation: 1s load-element;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  perspective: none;
+
+  opacity: 0;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-view__scene {
+  transform: rotateX(-30deg) rotateY(-45deg);
+  transform-style: preserve-3d;
+}
+
+.camera-transform {
+  transition: 1s transform ease-in-out;
+}
+
+@keyframes load-element {
+  0% {
+    opacity: 0;
+    transform: rotateX(0) rotateY(0) translateY(20px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0) rotateY0) translateY(0px);
+  }
+}

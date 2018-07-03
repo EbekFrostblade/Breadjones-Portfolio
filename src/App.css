@@ -1,28 +1,111 @@
-.App {
-  text-align: center;
+.centerMarker {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  margin-top: -2px;
+  background-color: hotpink;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.portfolio {
+  background-color: white;
+  min-height: 100vh;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.portfolio-header {
+  background-color: #E88554;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.App-title {
-  font-size: 1.5em;
+.portfolio-header__title {
+  animation-name: text-fade-in-and-slide;
+  animation-duration: 1s;
+
+  z-index: 1;
 }
 
-.App-intro {
-  font-size: large;
+.portfolio-header__name {
+  animation-name: text-fade-in-and-slide;
+  animation-duration: 1s;
+
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  
+  opacity: 0;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.portfolio-header__tagline {
+  animation-name: text-fade-in-and-slide;
+  animation-duration: 1s;
+
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  
+  opacity: 0;
+  display: inline-block;
+
+  z-index: 1;
+}
+
+.portfolio-content {
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.portfolio-content__window {
+  background-color: #736D5F;
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+}
+
+.portfolio-content__window--large {
+  background-color: #736D5F;
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+  width: 100%;
+
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+@keyframes text-fade-in-and-slide {
+    0% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes spin {
+  0% { transform: rotateY(0); }
+  40% { transform: rotateY(90deg); }
+  100% { transform: rotateY(90deg); }
 }
