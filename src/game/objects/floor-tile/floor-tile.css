@@ -2,14 +2,14 @@
     position: absolute;
     width: 200px;
     transform-style: preserve-3d;
-    transform: translateX(-40px) translateZ(40px);
+    transform: translateX(-45px) translateZ(45px);
     transition: transform 0.25s ease-out;
 
     cursor: pointer;
 }
 
 .floor-tile:hover {
-    transform: translateX(-40px) translateZ(40px) translateY(-10px);
+    transform: translateX(-45px) translateZ(45px) translateY(-10px);
 }
 
 .floor-tile:hover .floor-tile__face--top {
@@ -18,8 +18,8 @@
 
 .floor-tile__face {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
 }
 
 .floor-tile__face--top {
@@ -40,6 +40,6 @@
     background-color: #37BDFA;
     height: 20px;
 
-    transform: rotateY(90deg) translateX(80px);
+    transform: rotateY(90deg) translateX(90px);
     transform-origin: top right;
 }

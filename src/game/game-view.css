@@ -25,7 +25,7 @@
 }
 
 .camera-transform {
-  transition: 1s transform ease-in-out;
+  transition: 1s transform ease;
 }
 
 @keyframes load-element {

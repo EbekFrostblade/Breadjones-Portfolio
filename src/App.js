@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import './third-party/fontawesome/css/all.css';
+
+import BottomNav from './bottom-nav/bottom-nav.js';
+import SidebarNav from './sidebar-nav/sidebar-nav.js';
 import GameView from './game/game-view.js';
 
 class App extends Component {
@@ -7,19 +11,16 @@ class App extends Component {
     return (
       <section className="portfolio">
         <header className="portfolio-header">
-          <div className="portfolio-header__cuboid">
-
-          </div>
           <h1 className="portfolio-header__title">
             Hi, <span className="portfolio-header__name">I&#39;m Brad.</span>
           </h1>
           <h2 className="portfolio-header__tagline">
-            I make games, apps, and all sorts of cool stuff.
+            Check out some of my work.
           </h2>
-          <GameView />
-          
         </header>
-        <div className="centerMarker"></div>
+        <SidebarNav />
+        <GameView />
+        <BottomNav />
       </section>
     );
   }

@@ -1,28 +1,21 @@
-.centerMarker {
-  position: fixed;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  width: 4px;
-  height: 4px;
-  margin-left: -2px;
-  margin-top: -2px;
-  background-color: hotpink;
-}
-
 .portfolio {
-  background-color: white;
-  min-height: 100vh;
-}
-
-.portfolio-header {
   background-color: #E88554;
+  min-height: 100vh;
+  overflow: hidden;
+
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-header {
   color: white;
   text-align: center;
 
@@ -30,14 +23,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
+  animation-name: text-fade-in-and-slide;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+
+  z-index: 1;
 }
 
 .portfolio-header__title {
   animation-name: text-fade-in-and-slide;
   animation-duration: 1s;
 
-  z-index: 1;
+  font-size: 32px;
 }
 
 .portfolio-header__name {
@@ -47,6 +47,7 @@
   animation-delay: 1s;
   animation-fill-mode: forwards;
   
+  margin: 0;
   opacity: 0;
   display: inline-block;
 }
@@ -58,46 +59,21 @@
   animation-delay: 2s;
   animation-fill-mode: forwards;
   
+  margin: 0;
   opacity: 0;
   display: inline-block;
 
-  z-index: 1;
-}
-
-.portfolio-content {
-  width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-
-.portfolio-content__window {
-  background-color: #736D5F;
-  border-radius: 5px;
-  color: white;
-  padding: 20px;
-}
-
-.portfolio-content__window--large {
-  background-color: #736D5F;
-  border-radius: 5px;
-  color: white;
-  padding: 20px;
-  width: 100%;
-
-  grid-column-start: 1;
-  grid-column-end: span 3;
+  font-size: 24px;
 }
 
 @keyframes text-fade-in-and-slide {
     0% {
+      z-index: -1;
       transform: translate(0, 20px);
       opacity: 0;
+    }
+    1% {
+      z-index: 1;
     }
     100% {
       opacity: 1;
