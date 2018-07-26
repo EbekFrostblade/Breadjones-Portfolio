@@ -9,7 +9,7 @@
 }
 
 .floor-tile:hover {
-    transform: translateX(-45px) translateZ(45px) translateY(-10px);
+    transform: translateX(-45px) translateZ(45px) translateY(-5px);
 }
 
 .floor-tile:hover .floor-tile__face--top {

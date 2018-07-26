@@ -23,6 +23,26 @@ class SidebarNav extends Component {
 
     return (
       <nav className={toggleClass}>
+        <div className="sidebar-nav__item">
+          <span className="sidebar-nav__item-label">
+            Home
+          </span>
+        </div>
+        <div className="sidebar-nav__item">
+          <span className="sidebar-nav__item-label">
+            Programming
+          </span>
+        </div>
+        <div className="sidebar-nav__item">
+          <span className="sidebar-nav__item-label">
+            Writing
+          </span>
+        </div>
+        <div className="sidebar-nav__item">
+          <span className="sidebar-nav__item-label">
+            Fun Stuff
+          </span>
+        </div>
         <div className="sidebar-nav__mask"></div>
         <a className="sidebar-nav__toggle far fa-caret-square-down" onClick={() => this.toggleNav()}></a>
       </nav>
