@@ -20,12 +20,9 @@ class App extends Component {
     return (
       <Router>
         <section className="portfolio">
-          
-          <SidebarNav />
           <GameView />
           <BottomNav />
           <Route exact path="/" component={Welcome} />
-          <Route path="/skills" component={Skills} />
         </section>
       </Router>
     );

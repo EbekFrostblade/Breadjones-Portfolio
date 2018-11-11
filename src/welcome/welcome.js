@@ -14,7 +14,7 @@ class Welcome extends Component {
           Hi, <span className="portfolio-header__name">I&#39;m Brad.</span>
         </h1>
         <h2 className="portfolio-header__tagline">
-          Check out some of my work.
+          Thanks for checking our my portfolio. More to come soon!
         </h2>
       </section>
     );

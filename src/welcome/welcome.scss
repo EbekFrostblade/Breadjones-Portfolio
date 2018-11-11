@@ -7,12 +7,6 @@
   align-items: center;
   justify-content: center;
 
-  animation-name: text-fade-in-and-slide;
-  animation-duration: 1s;
-  animation-delay: 4s;
-  animation-direction: reverse;
-  animation-fill-mode: forwards;
-
   z-index: 1;
 
   &__title {
