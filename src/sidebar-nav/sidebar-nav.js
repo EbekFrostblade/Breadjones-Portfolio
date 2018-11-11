@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './sidebar-nav.css';
 
+import { Link } from 'react-router-dom';
+
 class SidebarNav extends Component {
   constructor(props) {
     super(props);
@@ -23,21 +25,22 @@ class SidebarNav extends Component {
 
     return (
       <nav className={toggleClass}>
+        <Link className="sidebar-nav__item" to='/' onClick={() => this.toggleNav()}>
+          <span className="sidebar-nav__item-label">
+            Explore
+          </span>
+        </Link>
+        <Link className="sidebar-nav__item" to='/skills' onClick={() => this.toggleNav()}>
+          <span className="sidebar-nav__item-label">
+            Skills
+          </span>
+        </Link>
         <div className="sidebar-nav__item">
           <span className="sidebar-nav__item-label">
-            Home
+            Projects
           </span>
         </div>
-        <div className="sidebar-nav__item">
-          <span className="sidebar-nav__item-label">
-            Programming
-          </span>
-        </div>
-        <div className="sidebar-nav__item">
-          <span className="sidebar-nav__item-label">
-            Writing
-          </span>
-        </div>
+        <div className="sidebar-nav__divider"></div>
         <div className="sidebar-nav__item">
           <span className="sidebar-nav__item-label">
             Fun Stuff
