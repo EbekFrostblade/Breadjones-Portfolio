@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import './third-party/fontawesome/css/all.css';
 
 import BottomNav from './bottom-nav/bottom-nav.js';
