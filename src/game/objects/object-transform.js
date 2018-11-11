@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './object-transform.scss';
 
 class ObjectTransform extends Component {
 

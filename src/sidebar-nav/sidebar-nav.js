@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './sidebar-nav.css';
+import './sidebar-nav.scss';
 
 import { Link } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ class SidebarNav extends Component {
   render() {
     var toggleClass = 'sidebar-nav';
     if (this.state.menuOpen) {
-      toggleClass += ' sidebar-nav__opened'
+      toggleClass += ' sidebar-nav--opened'
     }
 
     return (

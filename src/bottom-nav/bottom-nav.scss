@@ -1,0 +1,23 @@
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  margin: 20px;
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__link {
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+
+    padding-left: 20px;
+  }
+
+  &__link:hover {
+    color: #333333;
+  }
+}

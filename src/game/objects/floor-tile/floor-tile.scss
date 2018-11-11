@@ -1,0 +1,45 @@
+.floor-tile {
+    position: absolute;
+    width: 200px;
+    transform-style: preserve-3d;
+    transform: translateX(-45px) translateZ(45px);
+    transition: transform 0.25s ease-out;
+
+    cursor: pointer;
+    
+    &:hover {
+        transform: translateX(-45px) translateZ(45px) translateY(-5px);
+    }
+
+    &:hover &__face--top {
+        background-color: #75ccf4;
+    }
+
+    &__face {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+    }
+
+    &__face--top {
+        background-color: #32ADE5;
+
+        transform: rotateX(-90deg);
+        transform-origin: top center;
+    }
+
+    &__face--left {
+        background-color: #2B94C4;
+        height: 20px;
+
+        transform-origin: center left;
+    }
+
+    &__face--right {
+        background-color: #37BDFA;
+        height: 20px;
+
+        transform: rotateY(90deg) translateX(90px);
+        transform-origin: top right;
+    }
+}

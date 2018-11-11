@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './game-view.css';
+import './game-view.scss';
 
 // Game Object Modules
 import Transform from './objects/object-transform.js';

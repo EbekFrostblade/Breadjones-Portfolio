@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './floor-tile.css';
+import './floor-tile.scss';
 
 class FloorTile extends Component {
 
